@@ -10,7 +10,7 @@ def clusterMe(documents,title):
     topTerms = [];
     vectorizer = TfidfVectorizer(stop_words='english')
     X = vectorizer.fit_transform(documents)
-    true_k = 8
+    true_k = 5
     Model = KMeans(n_clusters = true_k, init ='k-means++', max_iter=100, n_init=1)
     Model.fit(X)
 

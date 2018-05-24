@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/results.css') }}">
+</head>
+
+<body>
+  <center><h2 style ="color:white;margin-bottom:5%;font-weight:lighter;padding-top:5%;">Your Cluster Predication was {{ prediction }}</h2></center>
+  <div style = "overflow-y:scroll;height:50%;">
+
+{% for cluster in topTerms %}
+  <table class="table-fill">
+    <thead>
+      <tr>
+        <th class="text-left">Cluster {{loop.index}}</th>
+      </tr>
+    </thead>
+    <tbody class="table-hover">
+      <tr>
+        <td class="text-left"><center>{{cluster[0]}}</center></td>
+      </tr>
+        <tr><td class="text-left"><center>{{cluster[1]}}</center></td></tr>
+        <tr><td class="text-left"><center>{{cluster[2]}}</center></td></tr>
+        <tr><td class="text-left"><center>{{cluster[3]}}</center></td></tr>
+        <tr><td class="text-left"><center>{{cluster[4]}}</center></td></tr>
+        <tr><td class="text-left"><center>{{cluster[5]}}</center></td></tr>
+        <tr><td class="text-left"><center>{{cluster[6]}}</center></td></tr>
+        <tr><td class="text-left"><center>{{cluster[7]}}</center></td></tr>
+        <tr><td class="text-left"><center>{{cluster[8]}}</center></td></tr>
+      <tr>  <td class="text-left"><center>{{cluster[9]}}</center></td></tr>
+
+    </tbody>
+  </table>
+{% endfor %}
+</div>
+</body>
+
+</html>

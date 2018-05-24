@@ -1,0 +1,16 @@
+
+<html>
+<head>
+  <title>Recommendation System</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Oswald" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+  <h3 class = "titleheader" style ="font-weight:lighter;font-size:40px;color:white;padding-top:10%;">Google Scholar <span style= "color:#e54040;"><i>Recommendation</i></span> System </h3>
+  <form class="form-wrapper cf" action = "/v1/search" method = "POST">
+    	<input type="text" style= "height:40px" placeholder="Search here..." id="title" name ="title" required>
+  	  <button type="submit">Search</button>
+  </form>
+
+</html>
